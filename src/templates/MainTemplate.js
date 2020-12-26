@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import { Children } from "react";
 import { ThemeProvider } from "styled-components";
 import Navigation from "../components/navigation/Navigation";
 import GlobalStyles from "../globalStyles/GlobalStyles";

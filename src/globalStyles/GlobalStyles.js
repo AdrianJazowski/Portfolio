@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing:border-box;
 }
 a{
-  color:white;
+  color:blue;
   text-decoration: none;
   &:hover{
     text-decoration:none;
