@@ -8,12 +8,15 @@ const GlobalStyles = createGlobalStyle`
   padding:0;
   box-sizing:border-box;
 }
+body{
+  background-color: rgb(206, 201, 201);
+}
 a{
-  color:blue;
   text-decoration: none;
+  color: white;
   &:hover{
     text-decoration:none;
-    color: red;
+    color: white;
   }
 }
 `;
