@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PortfolioContext from "./context";
 import { routes } from "./routes/Routes";
@@ -9,11 +9,34 @@ import AboutMe from "./views/about/AboutMe";
 import Contact from "./views/contact/Contact";
 import Home from "./views/home/Home";
 import Projects from "./views/projects/Projects";
+import { projectsData } from "./views/projects/projectsData";
 
 const App = () => {
+  const [projects, setProjects] = useState(projectsData);
+  const [selectedProjects, setSelectedProjects] = useState(projectsData);
   const [navIconToggle, setNavIconToggle] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownMenuToggle, setDropdownMenuToggle] = useState(false);
+  const [projectCategoryFilter, setProjectCategoryFilter] = useState("all");
+
+  const handleProjectCategory = (e) => {
+    setProjectCategoryFilter(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const FiltrByProjectCategory = () => {
+    let tempCategory = [...projects];
+    if (projectCategoryFilter !== "all") {
+      tempCategory = tempCategory.filter((category) => {
+        return category.typeProject === projectCategoryFilter;
+      });
+    }
+    setSelectedProjects([...tempCategory]);
+  };
+
+  useEffect(() => {
+    FiltrByProjectCategory();
+  }, [projectCategoryFilter]);
 
   const handleNavIconToggle = () => setNavIconToggle(!navIconToggle);
   const handleCloseMobileMenu = () => setNavIconToggle(false);
@@ -47,6 +70,12 @@ const App = () => {
           setDropdown,
           onMouseEnter,
           onMouseLeave,
+          projects,
+          setProjects,
+          projectCategoryFilter,
+          setProjectCategoryFilter,
+          handleProjectCategory,
+          selectedProjects,
         }}
       >
         <MainTemplate>
