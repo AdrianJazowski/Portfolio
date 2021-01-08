@@ -14,7 +14,6 @@ const FiltrByProjectCategory = () => {
 
   return (
     <Form.Group controlId="exampleForm.ControlSelect1">
-      <Form.Label>Projekty</Form.Label>
       <Form.Control
         as="select"
         onChange={handleProjectCategory}

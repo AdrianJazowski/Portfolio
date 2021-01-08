@@ -1,5 +1,8 @@
 /** @format */
 import ReduxTodoList from "../../assets/ReduxTodoList.PNG";
+import { FaReact, FaJira, FaBitbucket, FaSlack } from "react-icons/fa";
+import { DiJavascript, DiCss3, DiBootstrap, DiGitBranch } from "react-icons/di";
+import { SiRedux } from "react-icons/si";
 export const projectsData = [
   {
     id: 1,
@@ -8,6 +11,7 @@ export const projectsData = [
     procjetTitle: "React nr 1",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "React",
+    projectIcons: [<FaReact />, <DiJavascript />],
   },
   {
     id: 2,
@@ -16,6 +20,7 @@ export const projectsData = [
     procjetTitle: "JS 1 ",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "JS",
+    projectIcons: [<FaReact />, <DiJavascript />],
   },
   {
     id: 3,
@@ -24,6 +29,7 @@ export const projectsData = [
     procjetTitle: "Redux 1",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "Redux",
+    projectIcons: [<FaReact />, <DiJavascript />],
   },
   {
     id: 4,
@@ -32,5 +38,16 @@ export const projectsData = [
     procjetTitle: "React 2",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "React",
+    projectIcons: [<FaReact />, <DiJavascript />],
+  },
+  {
+    id: 5,
+    projectName: "Redux Todo list",
+    projectImg: ReduxTodoList,
+    procjetTitle:
+      "React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2",
+    gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
+    typeProject: "React",
+    projectIcons: [<FaReact />, <DiJavascript />],
   },
 ];

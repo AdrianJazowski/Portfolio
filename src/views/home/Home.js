@@ -2,40 +2,42 @@
 
 import React from "react";
 import { routes } from "../../routes/Routes";
-import Photo from "../../assets/homeImg.png";
 import {
   HomeWrapper,
   LeftHomeDiv,
-  RightHomeDiv,
   HomeH1,
+  Content,
+  HomeH2,
   LinkInHome,
-  DivForImg,
-  HomeImg,
+  TextInLink,
 } from "./HomeStyles";
 import AboutMe from "../about/AboutMe";
 import Projects from "../projects/Projects";
+import CustomJumbotron from "../../components/jumbotron/CustomJumbotron";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   return (
     <>
       <HomeWrapper>
         <LeftHomeDiv>
-          <HomeH1>
-            Cześć,
-            <br /> mam na imię Adrian
-            <br />i jestem <br />
-            Junior Frontend Developerem
-          </HomeH1>
-          <LinkInHome to={routes.contact}>Kontakt</LinkInHome>
+          <Content>
+            <HomeH1>Front-End Developer</HomeH1>
+            <HomeH2>Adrian Jazowski</HomeH2>
+            <LinkInHome contact to={routes.contact}>
+              <TextInLink>Kontakt</TextInLink>
+            </LinkInHome>
+            <LinkInHome aboutMe to={routes.contact}>
+              <TextInLink> Kontakt</TextInLink>
+            </LinkInHome>
+          </Content>
         </LeftHomeDiv>
-        <RightHomeDiv>
-          <DivForImg>
-            <HomeImg src={Photo}></HomeImg>
-          </DivForImg>
-        </RightHomeDiv>
       </HomeWrapper>
+      <CustomJumbotron>kilka słow o mnie</CustomJumbotron>
       <AboutMe />
+      <CustomJumbotron>Projekty</CustomJumbotron>
       <Projects />
+      <Footer />
     </>
   );
 };

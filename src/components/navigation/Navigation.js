@@ -53,9 +53,9 @@ const Navigation = () => {
           <NavMenuLi onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             <LinkInNav to={routes.projects} onClick={handleCloseMobileMenu}>
               Projekty
-              <ProjectsCaretInNav />
+              {/* <ProjectsCaretInNav /> */}
             </LinkInNav>
-            {dropdown && <Dropdown />}
+            {/* {dropdown && <Dropdown />} */}
           </NavMenuLi>
           <NavMenuLi>
             <LinkInNav to={routes.contact} onClick={handleCloseMobileMenu}>

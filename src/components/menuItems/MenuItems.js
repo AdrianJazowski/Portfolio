@@ -1,14 +1,16 @@
 /** @format */
+import ReactProjectsPage from "../../views/projects/ReactProjectsPage";
+import JavaScriptProjectsPage from "../../views/projects/JavaScriptProjectsPage";
 
 export const MenuItems = [
   {
     title: "Javascript",
-    path: "/javascriptProjects",
+    path: "JavaScriptProjectsPage",
     cName: "dropdwon-link",
   },
   {
     title: "React",
-    path: "/ReactProjects",
+    path: "JavaScriptProjectsPage",
     cName: "dropdwon-link",
   },
 ];

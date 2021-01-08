@@ -7,6 +7,11 @@ export const AboutMeWrapper = styled.div`
   display: flex;
   flex-direction: row;
   height: 90vh;
+  background: linear-gradient(
+    41deg,
+    rgba(238, 174, 202, 0.19371498599439774) 0%,
+    rgba(148, 187, 233, 0.30015756302521013) 100%
+  );
 `;
 export const LeftAbouteMeDiv = styled.div`
   display: flex;
@@ -30,29 +35,41 @@ export const AccordionH2 = styled.h2`
 export const SkillsIcons = styled.div`
   font-size: 100px;
   margin: 15px;
-  /* &:svg {
-    color: yellow;
-  } */
+  svg {
+    color: rgba(15, 193, 107, 0.5);
+    &:hover {
+      color: rgba(15, 193, 107, 0.9);
+    }
+  }
 `;
 export const CardAccordion = styled(Card)`
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
   background: transparent;
 `;
 
 export const CustomAccordion = styled(Accordion)`
   width: 100%;
   align-self: center;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
 `;
 export const ContainerForText = styled.div`
-  display: inline-block;
+  display: flex;
   background: rgba(255, 255, 255, 0.2);
-  padding: 3em;
   border-radius: 3em;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(40px);
   border: solid 2px transparent;
   background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.08);
+  align-items: center;
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
   ${({ one }) =>
     one &&
     css`
@@ -78,7 +95,9 @@ export const ContainerForText = styled.div`
       grid-row: 4/5;
     `}
 `;
-export const TextInGrid = styled.h5``;
+export const TextInGrid = styled.h5`
+  font-size: 18px;
+`;
 export const GridDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
