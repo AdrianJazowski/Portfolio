@@ -7,14 +7,15 @@ import {
   AboutMeWrapper,
   Skills,
   SkillsIcons,
-  AccordionH2,
+  AboutMeH2,
   CardAccordion,
   CustomAccordion,
   ContainerForText,
   GridDiv,
   TextInGrid,
+  IconContainer,
 } from "./AboutMeStyles";
-import { FaReact, FaJira, FaBitbucket, FaSlack } from "react-icons/fa";
+import { FaReact, FaJira, FaBitbucket, FaSlack, FaHtml5 } from "react-icons/fa";
 import { DiJavascript, DiCss3, DiBootstrap, DiGitBranch } from "react-icons/di";
 import { SiRedux } from "react-icons/si";
 import { Accordion, Card } from "react-bootstrap";
@@ -33,8 +34,8 @@ const AboutMe = () => {
             </ContainerForText>
             <ContainerForText two>
               <TextInGrid>
-                Kilka słow o mnie: Pochodze z okolic Krakowa, w wolnym czasie
-                lubie grać w gry planszowe i programować.
+                Pochodze z okolic Krakowa, w wolnym czasie lubie grać w gry
+                planszowe i programować.
               </TextInGrid>
             </ContainerForText>
             <ContainerForText three>
@@ -52,49 +53,54 @@ const AboutMe = () => {
           </GridDiv>
         </LeftAbouteMeDiv>
         <RightAbouteMeDiv>
-          <CustomAccordion defaultActiveKey="0">
-            <AccordionH2>Moje umiejętności</AccordionH2>
-            <CardAccordion>
-              <Accordion.Toggle as={Card.Header} eventKey="0">
-                FRONTEND
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey="0">
-                <Card.Body>
-                  <Skills>
-                    <SkillsIcons>
-                      <FaReact />
-                      <DiJavascript />
-                      <SiRedux />
-                      <DiCss3 />
-                      <DiBootstrap />
-                    </SkillsIcons>
-                  </Skills>
-                </Card.Body>
-              </Accordion.Collapse>
-            </CardAccordion>
-            <CardAccordion>
-              <Accordion.Toggle as={Card.Header} eventKey="1">
-                INNE
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey="1">
-                <Card.Body>
-                  <Skills>
-                    <SkillsIcons>
-                      <DiGitBranch />
-                      <FaJira />
-                      <FaBitbucket />
-                      <FaSlack />
-                    </SkillsIcons>
-                    <h3>A ponadto:</h3>
-                    <h4>
-                      Znajomość RDW, Metodyka SCRUM, Wiedza o agile, obeznanie z
-                      IDE, umiejętność znajdywania rozwiązań.
-                    </h4>
-                  </Skills>
-                </Card.Body>
-              </Accordion.Collapse>
-            </CardAccordion>
-          </CustomAccordion>
+          <Skills>
+            <AboutMeH2>Moje technologie i narzędzia</AboutMeH2>
+
+            <SkillsIcons>
+              <IconContainer>
+                <FaReact />
+                <p>React</p>
+              </IconContainer>
+              <IconContainer>
+                <DiJavascript />
+                <p>JavaScript</p>
+              </IconContainer>
+              <IconContainer>
+                <SiRedux />
+                <p>Reux</p>
+              </IconContainer>
+              <IconContainer>
+                <DiCss3 />
+                <p>Css</p>
+              </IconContainer>
+              <IconContainer>
+                <FaHtml5 />
+                <p>HTML</p>
+              </IconContainer>
+            </SkillsIcons>
+            <SkillsIcons>
+              <IconContainer>
+                <DiBootstrap />
+                <p>Bootstrap</p>
+              </IconContainer>
+              <IconContainer>
+                <DiGitBranch />
+                <p>GitHub</p>
+              </IconContainer>
+              <IconContainer>
+                <FaJira />
+                <p>Jira</p>
+              </IconContainer>
+              <IconContainer>
+                <FaBitbucket />
+                <p>BitBucket</p>
+              </IconContainer>
+              <IconContainer>
+                <FaSlack />
+                <p>Slack</p>
+              </IconContainer>
+            </SkillsIcons>
+          </Skills>
         </RightAbouteMeDiv>
       </AboutMeWrapper>
     </>
@@ -102,3 +108,49 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
+{
+  /* <CustomAccordion defaultActiveKey="0">
+<AccordionH2>Moje umiejętności</AccordionH2>
+<CardAccordion>
+  <Accordion.Toggle as={Card.Header} eventKey="0">
+    FRONTEND
+  </Accordion.Toggle>
+  <Accordion.Collapse eventKey="0">
+    <Card.Body>
+      <Skills>
+        <SkillsIcons>
+          <FaReact />
+          <DiJavascript />
+          <SiRedux />
+          <DiCss3 />
+          <DiBootstrap />
+        </SkillsIcons>
+      </Skills>
+    </Card.Body>
+  </Accordion.Collapse>
+</CardAccordion>
+<CardAccordion>
+  <Accordion.Toggle as={Card.Header} eventKey="1">
+    INNE
+  </Accordion.Toggle>
+  <Accordion.Collapse eventKey="1">
+    <Card.Body>
+      <Skills>
+        <SkillsIcons>
+          <DiGitBranch />
+          <FaJira />
+          <FaBitbucket />
+          <FaSlack />
+        </SkillsIcons>
+        <h3>A ponadto:</h3>
+        <h4>
+          Znajomość RDW, Metodyka SCRUM, Wiedza o agile, obeznanie z
+          IDE, umiejętność znajdywania rozwiązań.
+        </h4>
+      </Skills>
+    </Card.Body>
+  </Accordion.Collapse>
+</CardAccordion>
+</CustomAccordion> */
+}

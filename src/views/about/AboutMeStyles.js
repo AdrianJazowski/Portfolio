@@ -2,16 +2,14 @@
 
 import { Card, Accordion } from "react-bootstrap";
 import styled, { css } from "styled-components";
+import bgPhoto from "../../assets/bgForPages.jpg";
+import cardReverse from "../../assets/cardReverse.jpg";
 
 export const AboutMeWrapper = styled.div`
   display: flex;
   flex-direction: row;
   height: 90vh;
-  background: linear-gradient(
-    41deg,
-    rgba(238, 174, 202, 0.19371498599439774) 0%,
-    rgba(148, 187, 233, 0.30015756302521013) 100%
-  );
+  background-image: url(${bgPhoto});
 `;
 export const LeftAbouteMeDiv = styled.div`
   display: flex;
@@ -26,7 +24,8 @@ export const Skills = styled.div`
   text-align: center;
   width: 100%;
 `;
-export const AccordionH2 = styled.h2`
+export const AboutMeH2 = styled.h2`
+  color: #fff;
   text-align: center;
   padding-bottom: 24px;
   margin: 10px;
@@ -35,6 +34,9 @@ export const AccordionH2 = styled.h2`
 export const SkillsIcons = styled.div`
   font-size: 100px;
   margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
   svg {
     color: rgba(15, 193, 107, 0.5);
     &:hover {
@@ -60,7 +62,7 @@ export const CustomAccordion = styled(Accordion)`
 `;
 export const ContainerForText = styled.div`
   display: flex;
-  background: rgba(255, 255, 255, 0.2);
+  background-image: url(${cardReverse});
   border-radius: 3em;
   position: relative;
   z-index: 1;
@@ -69,7 +71,7 @@ export const ContainerForText = styled.div`
   background-clip: padding-box;
   align-items: center;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
+  box-shadow: 10px 10px 10px rgba(15, 193, 107, 0.5);
   ${({ one }) =>
     one &&
     css`
@@ -97,9 +99,18 @@ export const ContainerForText = styled.div`
 `;
 export const TextInGrid = styled.h5`
   font-size: 18px;
+  color: white;
 `;
 export const GridDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 25% 25% 25% 25%;
+`;
+
+export const IconContainer = styled.div`
+  width: 20%;
+  p {
+    font-size: 22px;
+    color: #fff;
+  }
 `;

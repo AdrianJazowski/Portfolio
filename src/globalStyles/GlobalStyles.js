@@ -10,9 +10,11 @@ const GlobalStyles = createGlobalStyle`
   transition: .3s;
 }
 body{
-  ${
-    "" /* background: linear-gradient(252deg, rgba(49,76,140,1) 5%, rgba(64,64,87,1) 36%, rgba(61,107,116,1) 92%); */
-  }
+  background: linear-gradient(
+    41deg,
+    rgba(238, 174, 202, 0.19371498599439774) 0%,
+    rgba(148, 187, 233, 0.30015756302521013) 100%
+  );
 
 }
 a{

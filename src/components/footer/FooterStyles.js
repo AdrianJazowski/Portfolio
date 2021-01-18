@@ -2,14 +2,16 @@
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import bgPhoto from "../../assets/bgForPages.jpg";
 
 export const FooterStyles = styled.div`
+  background-image: url(${bgPhoto});
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+
   text-align: center;
 `;
 
-export const FooterMedia = styled.div`
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-`;
+export const FooterMedia = styled.div``;
 export const FooterH2 = styled.h2`
   margin: 0;
   padding-top: 24px;
@@ -39,4 +41,5 @@ export const FooterLink = styled(Link)`
 `;
 export const FooterP = styled.p`
   color: #fff;
+  margin: 0;
 `;

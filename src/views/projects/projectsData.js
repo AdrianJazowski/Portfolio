@@ -8,7 +8,8 @@ export const projectsData = [
     id: 1,
     projectName: "Redux Todo list",
     projectImg: ReduxTodoList,
-    procjetTitle: "React nr 1",
+    procjetTitle:
+      "React nr 1React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "React",
     projectIcons: [<FaReact />, <DiJavascript />],
@@ -17,7 +18,8 @@ export const projectsData = [
     id: 2,
     projectName: "Redux Todo list",
     projectImg: ReduxTodoList,
-    procjetTitle: "JS 1 ",
+    procjetTitle:
+      "JS 1 React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "JS",
     projectIcons: [<FaReact />, <DiJavascript />],
@@ -26,7 +28,8 @@ export const projectsData = [
     id: 3,
     projectName: "Redux Todo list",
     projectImg: ReduxTodoList,
-    procjetTitle: "Redux 1",
+    procjetTitle:
+      "Redux 1 React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "Redux",
     projectIcons: [<FaReact />, <DiJavascript />],
@@ -35,7 +38,8 @@ export const projectsData = [
     id: 4,
     projectName: "Redux Todo list",
     projectImg: ReduxTodoList,
-    procjetTitle: "React 2",
+    procjetTitle:
+      "React 2 React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2React 2",
     gitLink: "https://github.com/AdrianJazowski/boardgameMaker",
     typeProject: "React",
     projectIcons: [<FaReact />, <DiJavascript />],

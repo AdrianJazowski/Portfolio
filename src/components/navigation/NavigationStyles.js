@@ -19,11 +19,15 @@ export const BrandInNav = styled(Link)`
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-  @media screen and (max-width: 960px) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+  &:hover {
+    color: rgba(15, 193, 107, 0.9);
+
+    @media screen and (max-width: 960px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
   }
 `;
 export const NavMenuIcon = styled.div`
@@ -81,9 +85,10 @@ export const LinkInNav = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 1rem;
   &:hover {
-    background-color: #1888ff;
+    /* background-color: rgba(15, 193, 107, 0.9);
     border-radius: 4px;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; */
+    color: rgba(15, 193, 107, 0.9);
   }
   @media screen and (max-width: 960px) {
     text-align: center;
