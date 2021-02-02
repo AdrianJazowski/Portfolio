@@ -59,7 +59,6 @@ const Projects = () => {
                         <h3>{procjetTitle}</h3>
                       </CardBody>
                       <CardIcons>
-                        {console.log(projectIcons)}
                         {projectIcons.map((icon) => {
                           return icon;
                         })}
@@ -77,19 +76,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-{
-  /* <ProjectCard>
-<CardImg src={projectImg} />
-<CardText>
-  <CardH2>{projectName}</CardH2>
-  <CardIcons>
-    {console.log(projectIcons)}
-    {projectIcons.map((icon) => {
-      return icon;
-    })}
-  </CardIcons>
-</CardText>
-<CardFooter href={gitLink}>{gitLink}</CardFooter>
-</ProjectCard> */
-}

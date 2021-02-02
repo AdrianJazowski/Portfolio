@@ -9,7 +9,6 @@ export const AboutMeWrapper = styled.div`
   display: flex;
   flex-direction: row;
   height: 90vh;
-  background-image: url(${bgPhoto});
 `;
 export const LeftAbouteMeDiv = styled.div`
   display: flex;
@@ -98,6 +97,7 @@ export const ContainerForText = styled.div`
     `}
 `;
 export const TextInGrid = styled.h5`
+  padding: 0 12px;
   font-size: 18px;
   color: white;
 `;

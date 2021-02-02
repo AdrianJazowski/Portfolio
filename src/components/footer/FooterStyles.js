@@ -5,9 +5,6 @@ import styled from "styled-components";
 import bgPhoto from "../../assets/bgForPages.jpg";
 
 export const FooterStyles = styled.div`
-  background-image: url(${bgPhoto});
-  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-
   text-align: center;
 `;
 

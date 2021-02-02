@@ -20,7 +20,12 @@ const Footer = () => {
       <FooterMedia>
         <FooterH2>Social Media</FooterH2>
         <FooterIcons>
-          <AiFillLinkedin />
+          <a
+            href="https://www.linkedin.com/in/adrian-jazowski/"
+            target="_blank"
+          >
+            <AiFillLinkedin />
+          </a>
           <AiFillGithub />
           <AiFillMail />
         </FooterIcons>

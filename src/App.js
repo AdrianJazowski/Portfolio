@@ -20,8 +20,7 @@ const App = () => {
   const [projectCategoryFilter, setProjectCategoryFilter] = useState("all");
 
   const handleProjectCategory = (e) => {
-    setProjectCategoryFilter(e.target.value);
-    console.log(e.target.value);
+    setProjectCategoryFilter(e.target.id);
   };
 
   const FiltrByProjectCategory = () => {

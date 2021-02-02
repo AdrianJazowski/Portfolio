@@ -1,7 +1,8 @@
 /** @format */
 import React, { useContext } from "react";
-import { Form } from "react-bootstrap";
+import { Col, Form } from "react-bootstrap";
 import PortfolioContext from "../../context";
+import { StyledForm } from "./FilterByProjectCategoryStyled";
 
 const FiltrByProjectCategory = () => {
   const value = useContext(PortfolioContext);
@@ -13,16 +14,20 @@ const FiltrByProjectCategory = () => {
   ];
 
   return (
-    <Form.Group controlId="exampleForm.ControlSelect1">
-      <Form.Control
-        as="select"
-        onChange={handleProjectCategory}
-        id="categorySelect"
-      >
-        {categories.map((category) => {
-          return <option>{category}</option>;
-        })}
-      </Form.Control>
+    <Form.Group>
+      {categories.map((category) => {
+        return (
+          <>
+            <StyledForm
+              type="radio"
+              label={category}
+              name="formHorizontalRadios"
+              id={category}
+              onChange={handleProjectCategory}
+            />
+          </>
+        );
+      })}
     </Form.Group>
   );
 };

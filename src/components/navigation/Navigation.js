@@ -8,7 +8,6 @@ import {
   NavMenuUl,
   NavMenuLi,
   LinkInNav,
-  ProjectsCaretInNav,
 } from "./NavigationStyles";
 import { GiHamburgerMenu, GiCrossedSwords } from "react-icons/gi";
 import PortfolioContext from "../../context";
@@ -28,7 +27,7 @@ const Navigation = () => {
   return (
     <>
       <CustomNav>
-        <BrandInNav>Adrian Jazowski</BrandInNav>
+        <BrandInNav to={routes.home}>Adrian Jazowski</BrandInNav>
         <NavMenuIcon onClick={handleNavIconToggle}>
           {navIconToggle ? (
             <GiCrossedSwords style={{ color: "white" }} />

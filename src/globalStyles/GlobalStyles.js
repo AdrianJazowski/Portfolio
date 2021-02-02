@@ -1,6 +1,7 @@
 /** @format */
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createGlobalStyle } from "styled-components";
+import bgPhoto from "../assets/bgForPages.jpg";
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -10,11 +11,7 @@ const GlobalStyles = createGlobalStyle`
   transition: .3s;
 }
 body{
-  background: linear-gradient(
-    41deg,
-    rgba(238, 174, 202, 0.19371498599439774) 0%,
-    rgba(148, 187, 233, 0.30015756302521013) 100%
-  );
+  background-image: url(${bgPhoto});
 
 }
 a{

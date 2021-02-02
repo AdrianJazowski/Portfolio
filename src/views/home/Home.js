@@ -24,8 +24,8 @@ const Home = () => {
           <Content>
             <HomeH1>Front-End Developer</HomeH1>
             <HomeH2>Adrian Jazowski</HomeH2>
-            <LinkInHome contact to={routes.contact}>
-              <TextInLink>Kontakt</TextInLink>
+            <LinkInHome contact to={routes.projects}>
+              <TextInLink>Projekty</TextInLink>
             </LinkInHome>
             <LinkInHome aboutMe to={routes.contact}>
               <TextInLink> Kontakt</TextInLink>

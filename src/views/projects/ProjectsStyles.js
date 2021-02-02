@@ -7,7 +7,6 @@ import cardReverse from "../../assets/cardReverse.jpg";
 export const ProjectPageWrapper = styled.div`
   height: 100%;
   width: 100%;
-  background-image: url(${bgPhoto});
   margin: 0;
 `;
 
@@ -35,15 +34,7 @@ export const ProjectCard = styled.div`
   cursor: pointer;
   margin: 30px;
 `;
-// export const CardImg = styled.img`
-//   width: 100%;
-//   border-top-left-radius: 15px;
-//   border-top-right-radius: 15px;
-//   &:hover {
-//     transform: scale(1.15);
-//     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-//   }
-// `;
+
 export const CardText = styled.div`
   grid-area: text;
   margin: 25px;
@@ -77,7 +68,7 @@ export const CardFooter = styled.a`
 `;
 
 export const Cardwrapper = styled.div`
-  margin: 100px auto 0;
+  margin: 25px auto 0;
   width: 400px;
   height: 600px;
   perspective: 1000px;
