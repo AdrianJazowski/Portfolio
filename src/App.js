@@ -3,24 +3,31 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PortfolioContext from "./context";
-import { routes } from "./routes/Routes";
 import MainTemplate from "./templates/MainTemplate";
-import AboutMe from "./views/about/AboutMe";
-import Contact from "./views/contact/Contact";
 import Home from "./views/home/Home";
-import Projects from "./views/projects/Projects";
-import { projectsData } from "./views/projects/projectsData";
+import { projectsData } from "./data/projectsData";
 
 const App = () => {
-  const [projects, setProjects] = useState(projectsData);
-  const [selectedProjects, setSelectedProjects] = useState(projectsData);
+  const [projects, setProjects] = useState([...projectsData]);
+  const [selectedProjects, setSelectedProjects] = useState([...projectsData]);
   const [navIconToggle, setNavIconToggle] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   const [dropdownMenuToggle, setDropdownMenuToggle] = useState(false);
   const [projectCategoryFilter, setProjectCategoryFilter] = useState("all");
 
   const handleProjectCategory = (e) => {
-    setProjectCategoryFilter(e.target.id);
+    setProjectCategoryFilter(e.target.value);
+  };
+
+  const toggleIsFlipped = (projectId) => {
+    const flippedProjects = selectedProjects.map((project) => {
+      if (project.id === projectId) {
+        project.isFlipped = !project.isFlipped;
+      }
+      return project;
+    });
+
+    setSelectedProjects([...flippedProjects]);
   };
 
   const FiltrByProjectCategory = () => {
@@ -70,20 +77,14 @@ const App = () => {
           onMouseEnter,
           onMouseLeave,
           projects,
-          setProjects,
           projectCategoryFilter,
-          setProjectCategoryFilter,
           handleProjectCategory,
           selectedProjects,
+          toggleIsFlipped,
         }}
       >
         <MainTemplate>
-          <Switch>
-            <Route exact path={routes.home} component={Home} />
-            <Route exact path={routes.aboutMe} component={AboutMe} />
-            <Route exact path={routes.projects} component={Projects} />
-            <Route exact path={routes.contact} component={Contact} />
-          </Switch>
+          <Home />
         </MainTemplate>
       </PortfolioContext.Provider>
     </BrowserRouter>

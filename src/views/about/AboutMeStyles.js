@@ -2,21 +2,23 @@
 
 import { Card, Accordion } from "react-bootstrap";
 import styled, { css } from "styled-components";
-import bgPhoto from "../../assets/bgForPages.jpg";
 import cardReverse from "../../assets/cardReverse.jpg";
 
 export const AboutMeWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  height: 90vh;
+  display: block;
+  height: 120vh;
 `;
 export const LeftAbouteMeDiv = styled.div`
+  width: 80%;
+  height: 60vh;
   display: flex;
-  flex: 1;
+  margin: auto;
 `;
 export const RightAbouteMeDiv = styled.div`
+  width: 80%;
+  height: 60vh;
   display: flex;
-  flex: 1;
+  margin: auto;
 `;
 export const Skills = styled.div`
   margin: auto;
@@ -43,34 +45,20 @@ export const SkillsIcons = styled.div`
     }
   }
 `;
-export const CardAccordion = styled(Card)`
-  backdrop-filter: blur(40px);
-  border: solid 2px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
-  background: transparent;
-`;
 
-export const CustomAccordion = styled(Accordion)`
-  width: 100%;
-  align-self: center;
-  backdrop-filter: blur(40px);
-  border: solid 2px transparent;
-  background-clip: padding-box;
-  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.48);
-`;
 export const ContainerForText = styled.div`
   display: flex;
-  background-image: url(${cardReverse});
+  /* background-image: url(${cardReverse}); */
+  background-color: rgba(15, 193, 107, 0.1);
   border-radius: 3em;
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(5px);
   border: solid 2px transparent;
   background-clip: padding-box;
   align-items: center;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(15, 193, 107, 0.5);
+  box-shadow: 0px 0px 15px 10px rgb(15 193 107 / 50%);
   ${({ one }) =>
     one &&
     css`

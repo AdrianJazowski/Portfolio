@@ -5,13 +5,8 @@ import FiltrByProjectCategory from "../../components/filters/FiltrByProjectCateg
 import PortfolioContext from "../../context";
 import {
   ProjectCardDeck,
-  ProjectCard,
   CardImg,
-  CardText,
-  CardH2,
   CardIcons,
-  CardStats,
-  CardFooter,
   Cardwrapper,
   CardInner,
   FrontCard,
@@ -21,15 +16,13 @@ import {
   CardBody,
   ProjectPageWrapper,
 } from "./ProjectsStyles";
+import { AiFillGithub } from "react-icons/ai";
+import Flip from "react-reveal/Flip";
 
 const Projects = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
   const value = useContext(PortfolioContext);
-  const { selectedProjects } = value;
+  const { selectedProjects, toggleIsFlipped } = value;
 
-  const handleIsFlipped = () => {
-    setIsFlipped(!isFlipped);
-  };
   return (
     <>
       <ProjectPageWrapper>
@@ -42,31 +35,41 @@ const Projects = () => {
               procjetTitle,
               gitLink,
               projectIcons,
+              isFlipped,
+              id,
             } = project;
             return (
-              <Cardwrapper>
-                <CardInner onClick={handleIsFlipped} isFlipped={isFlipped}>
-                  <FrontCard>
-                    <h2>{projectName}</h2>
-                  </FrontCard>
-                  <BackCard>
-                    <CardContent>
-                      <CardHeader>
-                        <CardImg src={projectImg} alt={projectName} />
-                        <h2>{projectName}s</h2>
-                      </CardHeader>
-                      <CardBody>
-                        <h3>{procjetTitle}</h3>
-                      </CardBody>
-                      <CardIcons>
-                        {projectIcons.map((icon) => {
-                          return icon;
-                        })}
-                      </CardIcons>
-                    </CardContent>
-                  </BackCard>
-                </CardInner>
-              </Cardwrapper>
+              <Flip left>
+                <Cardwrapper>
+                  <CardInner
+                    onClick={() => toggleIsFlipped(id)}
+                    isFlipped={isFlipped}
+                  >
+                    <FrontCard>
+                      <h2>{projectName}</h2>
+                    </FrontCard>
+                    <BackCard>
+                      <CardContent>
+                        <CardHeader>
+                          <CardImg src={projectImg} alt={projectName} />
+                          <h2>{projectName}</h2>
+                        </CardHeader>
+                        <CardBody>
+                          <h3>{procjetTitle}</h3>
+                        </CardBody>
+                        <CardIcons>
+                          {projectIcons.map((icon) => {
+                            return icon;
+                          })}
+                          <a href={gitLink} target="_blank">
+                            <AiFillGithub />
+                          </a>
+                        </CardIcons>
+                      </CardContent>
+                    </BackCard>
+                  </CardInner>
+                </Cardwrapper>
+              </Flip>
             );
           })}
         </ProjectCardDeck>

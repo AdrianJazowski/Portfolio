@@ -11,7 +11,7 @@ import {
   FooterLink,
   FooterP,
 } from "./FooterStyles";
-import { routes } from "../../routes/Routes";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const data = new Date().getFullYear();
@@ -26,15 +26,19 @@ const Footer = () => {
           >
             <AiFillLinkedin />
           </a>
-          <AiFillGithub />
-          <AiFillMail />
+          <a href="https://github.com/AdrianJazowski" target="_blank">
+            <AiFillGithub />
+          </a>
+          <Link>
+            <AiFillMail />
+          </Link>
         </FooterIcons>
       </FooterMedia>
       <FooterNavigation>
-        <FooterLink to={routes.home}>Strona główna</FooterLink>
-        <FooterLink to={routes.aboutMe}>O mnie</FooterLink>
-        <FooterLink to={routes.projects}>Projekty</FooterLink>
-        <FooterLink to={routes.contact}>Kontakt</FooterLink>
+        <FooterLink>Strona główna</FooterLink>
+        <FooterLink> O mnie</FooterLink>
+        <FooterLink> Projekty</FooterLink>
+        <FooterLink>Kontakt</FooterLink>
       </FooterNavigation>
       <FooterP>Prawa autorskie © {data} | Adrian Jazowski</FooterP>
     </FooterStyles>

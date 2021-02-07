@@ -9,6 +9,8 @@ import {
   StyledErrorMessageWrapper,
   StyledForm,
   StyledH2,
+  DIVek,
+  FormButton,
 } from "./ContactStyles";
 
 const contactFormSchema = Yup.object().shape({
@@ -42,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <DIVek>
       <Formik
         initialValues={{
           userName: "",
@@ -52,12 +54,17 @@ const ContactForm = () => {
         }}
         validationSchema={contactFormSchema}
         onSubmit={(values) => {
-          console.log(values);
+          emailjs.send(
+            process.env.REACT_APP_EMAIL_SERVICE,
+            process.env.REACT_APP_EMAIL_TEMPLATE,
+            values,
+            process.env.REACT_APP_EMAIL_USER
+          );
         }}
       >
         {({ values }) => (
-          <StyledForm onSubmit={sendEmail}>
-            <StyledH2>Contact form</StyledH2>
+          <StyledForm>
+            <StyledH2>Napisz do mnie</StyledH2>
             <StyledField
               id="userName"
               name="userName"
@@ -75,6 +82,7 @@ const ContactForm = () => {
               name="userEmail"
               value={values.userEmail}
               type="email"
+              autoComplete="off"
               placeholder="Type your email..."
             />
             <StyledErrorMessageWrapper>
@@ -102,13 +110,13 @@ const ContactForm = () => {
             <StyledErrorMessageWrapper>
               <ErrorMessage name="acceptTerms" />
             </StyledErrorMessageWrapper>
-            <button submitInForm type="submit">
+            <FormButton submitInForm type="submit">
               send
-            </button>
+            </FormButton>
           </StyledForm>
         )}
       </Formik>
-    </div>
+    </DIVek>
   );
 };
 

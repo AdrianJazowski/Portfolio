@@ -1,7 +1,6 @@
 /** @format */
-import { CardDeck, Card } from "react-bootstrap";
+import { CardDeck } from "react-bootstrap";
 import styled, { css } from "styled-components";
-import bgPhoto from "../../assets/bgForPages.jpg";
 import cardReverse from "../../assets/cardReverse.jpg";
 
 export const ProjectPageWrapper = styled.div`
@@ -11,42 +10,18 @@ export const ProjectPageWrapper = styled.div`
 `;
 
 export const ProjectCardDeck = styled(CardDeck)`
-  width: 90%;
+  width: 70%;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
 `;
 
-export const ProjectCard = styled.div`
-  display: grid;
-  grid-template-columns: 300px;
-  grid-template-rows: 145px 100px 80px;
-  grid-template-areas: "image" "text" "stats";
-
-  border-radius: 18px;
-  background: white;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
-  text-align: center;
-
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin: 30px;
-`;
-
-export const CardText = styled.div`
-  grid-area: text;
-  margin: 25px;
-`;
-export const CardH2 = styled.h2`
-  margin-top: 0px;
-  font-size: 28px;
-`;
 export const CardIcons = styled.div`
   font-size: 30px;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 
   svg {
     margin: 0 15px 25px 15px;
@@ -55,23 +30,12 @@ export const CardIcons = styled.div`
     }
   }
 `;
-export const CardFooter = styled.a`
-  grid-area: stats;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 12px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background: rgb(255, 7, 110);
-`;
 
 export const Cardwrapper = styled.div`
-  margin: 25px auto 0;
-  width: 400px;
-  height: 600px;
-  perspective: 1000px;
+  margin: 25px 25px 0;
+  width: 300px;
+  height: 400px;
+  perspective: 6000px;
 `;
 export const CardInner = styled.div`
   width: 100%;
@@ -96,7 +60,6 @@ export const FrontCard = styled.div`
   overflow: hidden;
   border-radius: 16px;
   box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-  /* background-image: linear-gradient(to bottom right, #ffce00, #fe4880); */
   background-image: url(${cardReverse});
   display: flex;
   align-items: center;
@@ -126,20 +89,21 @@ export const CardContent = styled.div`
 `;
 export const CardHeader = styled.div`
   position: relative;
-  padding: 30px 30px 40px;
+  padding: 10px 10px 20px;
   height: 40%;
   h2 {
     color: black;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
+    transform: translate(0%, -100%);
   }
 `;
 export const CardImg = styled.img`
   display: block;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto 30px;
   border-radius: 50%;
   background-color: #fff;
@@ -147,12 +111,11 @@ export const CardImg = styled.img`
   object-fit: cover;
 `;
 export const CardBody = styled.div`
-  padding: 30px;
   text-align: center;
-  height: 50%;
+  height: 45%;
   h3 {
     color: #212121;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 15px;
   }

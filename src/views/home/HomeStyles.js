@@ -3,6 +3,7 @@
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import bgPhoto from "../../assets/bg.jpg";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 export const HomeWrapper = styled.div`
   text-align: center;
@@ -15,7 +16,7 @@ export const HomeWrapper = styled.div`
   z-index: -10;
 `;
 export const LeftHomeDiv = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -5;
@@ -53,19 +54,20 @@ export const LinkInHome = styled(Link)`
     `}
   &:hover {
     background-color: rgba(15, 193, 107, 0.9);
+    color: white;
   }
 `;
 export const TextInLink = styled.span`
   position: absolute;
   transform: translate(-50%, 50%);
 `;
-// export const DivForImg = styled.div``;
-// export const HomeImg = styled.img`
-//   position: absolute;
-//   top: 40%;
-//   left: 50%;
-//   margin-right: -50%;
-//   transform: translate(-50%, -50%);
-//   width: 350px;
-//   height: 300px;
-// `;
+
+export const Arrow = styled(FaArrowCircleUp)`
+  position: fixed;
+  z-index: 999;
+  bottom: 5%;
+  right: 5%;
+  font-size: 48px;
+  color: rgba(15, 193, 107, 0.9);
+  cursor: pointer;
+`;

@@ -2,7 +2,6 @@
 
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import bgPhoto from "../../assets/bgForPages.jpg";
 
 export const FooterStyles = styled.div`
   text-align: center;

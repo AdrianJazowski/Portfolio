@@ -1,7 +1,7 @@
 /** @format */
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createGlobalStyle } from "styled-components";
-import bgPhoto from "../assets/bgForPages.jpg";
+import bgPhoto from "../assets/greyBg.jpg";
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -12,14 +12,13 @@ const GlobalStyles = createGlobalStyle`
 }
 body{
   background-image: url(${bgPhoto});
+  background-size: cover;
 
 }
 a{
   text-decoration: none;
-  color: white;
   &:hover{
     text-decoration:none;
-    color: white;
   }
 }
 

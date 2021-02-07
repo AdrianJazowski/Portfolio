@@ -2,7 +2,6 @@
 
 import { Jumbotron } from "react-bootstrap";
 import styled from "styled-components";
-import bgPhoto from "../../assets/bgForPages.jpg";
 
 export const StyledJumbotron = styled(Jumbotron)`
   background: transparent;

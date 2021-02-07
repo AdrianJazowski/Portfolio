@@ -85,9 +85,6 @@ export const LinkInNav = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 1rem;
   &:hover {
-    /* background-color: rgba(15, 193, 107, 0.9);
-    border-radius: 4px;
-    transition: all 0.2s ease-out; */
     color: rgba(15, 193, 107, 0.9);
   }
   @media screen and (max-width: 960px) {

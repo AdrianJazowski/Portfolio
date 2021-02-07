@@ -3,17 +3,19 @@
 import { Field, Form } from "formik";
 import styled, { css } from "styled-components";
 
+export const DIVek = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+`;
+
 export const StyledForm = styled(Form)`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 70vh;
-  background: rgba(0, 0, 0, 0.8);
+  /* background: rgba(0, 0, 0, 0.1); */
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 24px 10px rgba(15, 193, 107, 0.3);
 `;
 
 export const StyledField = styled(Field)`
@@ -22,7 +24,7 @@ export const StyledField = styled(Field)`
   margin: 10px 0;
   background: transparent;
   border: 0px;
-  border-bottom: 1px solid #c5ecfd;
+  border-bottom: 1px solid rgba(15, 193, 107);
   outline: none;
   padding: 10px;
   color: #c5ecfd;
@@ -32,13 +34,13 @@ export const StyledField = styled(Field)`
   ${({ textarea }) =>
     textarea &&
     css`
-      border: 2px solid #c5ecfd;
+      border: 2px solid rgba(15, 193, 107);
       resize: none;
       height: 200px;
     `}
 `;
 export const StyledH2 = styled.h2`
-  color: #c5ecfd;
+  color: rgba(15, 193, 107);
   text-align: center;
   margin-bottom: 25px;
 `;
@@ -46,4 +48,13 @@ export const StyledH2 = styled.h2`
 export const StyledErrorMessageWrapper = styled.div`
   color: crimson;
   margin: 5px 0;
+`;
+export const FormButton = styled.button`
+  display: flex;
+  margin: auto;
+  padding: 10px 15px;
+  background: transparent;
+  color: bisque;
+  border: 1px solid rgba(15, 193, 107);
+  border-radius: 10px;
 `;
