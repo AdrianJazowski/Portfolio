@@ -3,19 +3,25 @@
 import { Field, Form } from "formik";
 import styled, { css } from "styled-components";
 
-export const DIVek = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 36px;
+  @media screen and (max-width: 420px) {
+    margin-top: 80px;
+    margin-bottom: 15px;
+  }
 `;
 
 export const StyledForm = styled(Form)`
   width: 100%;
   max-width: 70vh;
-  /* background: rgba(0, 0, 0, 0.1); */
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 0 24px 10px rgba(15, 193, 107, 0.3);
+  @media screen and (max-width: 1025px) {
+    width: 70%;
+  }
 `;
 
 export const StyledField = styled(Field)`

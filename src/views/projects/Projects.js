@@ -40,8 +40,9 @@ const Projects = () => {
             } = project;
             return (
               <Flip left>
-                <Cardwrapper>
+                <Cardwrapper key={id}>
                   <CardInner
+                    key={id}
                     onClick={() => toggleIsFlipped(id)}
                     isFlipped={isFlipped}
                   >

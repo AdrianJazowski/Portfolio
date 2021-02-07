@@ -3,7 +3,7 @@ import { CardDeck } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import cardReverse from "../../assets/cardReverse.jpg";
 
-export const ProjectPageWrapper = styled.div`
+export const ProjectPageWrapper = styled.ul`
   height: 100%;
   width: 100%;
   margin: 0;
@@ -37,13 +37,14 @@ export const Cardwrapper = styled.div`
   height: 400px;
   perspective: 6000px;
 `;
-export const CardInner = styled.div`
+export const CardInner = styled.li`
   width: 100%;
   height: 100%;
   transition: transform 1s;
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  list-style: none;
 
   ${({ isFlipped }) =>
     isFlipped &&

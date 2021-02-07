@@ -15,7 +15,7 @@ export const projectsData = [
     projectName: "Online Shop",
     projectImg: OnlineShop,
     procjetTitle:
-      "Aplikacja sklepu internetowego z telefonami. Projekt zbudowany przy wykorzystaniu Reacta, React-router-dom, zarządzanie stanem za pomocą context API. Projekt wykorzystuje do stylowania Material Ui, dane zarządzane za pomocą CMS-a.",
+      "Aplikacja sklepu internetowego z telefonami. Projekt zbudowany przy wykorzystaniu Reacta, React-router-dom, zarządzanie stanem za pomocą context API. Projekt wykorzystuje do stylowania Material Ui, dane zarządzane za pomocą CMSa.",
     gitLink: "https://github.com/AdrianJazowski/onlineShop",
     typeProject: "React",
 

@@ -18,28 +18,35 @@ export const BrandInNav = styled(Link)`
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   &:hover {
     color: rgba(15, 193, 107, 0.9);
 
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 1025px) {
       position: absolute;
       top: 0;
       left: 0;
       transform: translate(25%, 50%);
+      font-size: 3rem;
     }
+  }
+  @media screen and (max-width: 420px) {
+    display: none;
   }
 `;
 export const NavMenuIcon = styled.div`
   display: none;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1025px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    transform: translate(-100%, 45%);
+    font-size: 2.8rem;
     cursor: pointer;
+  }
+  @media screen and (max-width: 420px) {
+    transform: translate(-100%, 0%);
   }
 `;
 export const NavMenuUl = styled.ul`
@@ -53,13 +60,13 @@ export const NavMenuUl = styled.ul`
   justify-content: end;
   z-index: 100;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1025px) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     position: absolute;
-    top: 80px;
+    top: 135px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -87,11 +94,12 @@ export const LinkInNav = styled(Link)`
   &:hover {
     color: rgba(15, 193, 107, 0.9);
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1025px) {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
+    font-size: 36px;
     &:hover {
       background-color: #1888ff;
       border-radius: 0;
@@ -99,7 +107,7 @@ export const LinkInNav = styled(Link)`
   }
 `;
 export const ProjectsCaretInNav = styled(AiFillCaretDown)`
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1025px) {
     display: none;
   }
 `;

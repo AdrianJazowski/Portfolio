@@ -9,7 +9,7 @@ import {
   StyledErrorMessageWrapper,
   StyledForm,
   StyledH2,
-  DIVek,
+  Wrapper,
   FormButton,
 } from "./ContactStyles";
 
@@ -19,7 +19,7 @@ const contactFormSchema = Yup.object().shape({
   message: Yup.string()
     .required("enter your message")
     .min(5, "type a longer message"),
-  acceptTerms: Yup.bool().oneOf([true], "accept terms!"),
+  // acceptTerms: Yup.bool().oneOf([true], "accept terms!"),
 });
 
 const ContactForm = () => {
@@ -44,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <DIVek>
+    <Wrapper>
       <Formik
         initialValues={{
           userName: "",
@@ -101,22 +101,13 @@ const ContactForm = () => {
               <ErrorMessage name="message" />
             </StyledErrorMessageWrapper>
 
-            <Field
-              id="acceptTerms"
-              name="acceptTerms"
-              placeholder="type your acceptTerms..."
-              type="checkbox"
-            />
-            <StyledErrorMessageWrapper>
-              <ErrorMessage name="acceptTerms" />
-            </StyledErrorMessageWrapper>
             <FormButton submitInForm type="submit">
               send
             </FormButton>
           </StyledForm>
         )}
       </Formik>
-    </DIVek>
+    </Wrapper>
   );
 };
 
